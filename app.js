@@ -134,7 +134,8 @@ const addTransaction = (e) => {
 
     // Create a new data object model schema
     const newTransaction = {
-        id: crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(),
+
+id: 'tx-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
         description: descValue,
         amount: amountValue,
         type: typeValue,
